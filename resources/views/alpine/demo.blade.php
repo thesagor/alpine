@@ -10,25 +10,28 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    
-    <div class="container">
-        <div class="font-sans antialiased dark:bg-black dark:text-white/50">
-            <div class="bg-gray-50 text-red-500">
-                <h1 class="text-3xl font-bold underline">
-                    Hello world!
-                </h1>
-                <p class="text-10xl hidden text-red-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolor ipsa aspernatur molestias, enim, eum minima vel perspiciatis quod, earum libero! Dolor consequatur ipsum laborum odio. Placeat sit dolor laudantium.
-                </p>
+
+    <div class="container m-50">
+        <div class="accordian" x-data="condition">
+            <button class="show" @click="open=true">Show</button>
+            <button class="hide" @click="open=false">Hide</button>
+            <div class="box bg-green-600"  x-show="open">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium corporis excepturi, eaque esse eius doloribus non, eum recusandae adipisci sapiente assumenda! Eaque modi earum pariatur dolores laudantium blanditiis minima non, beatae delectus corporis magnam, fugit consequuntur iure assumenda temporibus ex?</p>
+
+
             </div>
+
         </div>
     </div>
 
-    <div class="container">
-        <article>
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aliquid quisquam, rerum voluptas ea dolorum aut quod debitis vitae, temporibus quidem hic esse, voluptates dolores similique atque facere magnam nemo.</p>
-        </article>
-    </div>
+
+
+
+    <script>
+        const condition= {
+            open: true
+        }
+    </script>
+            
 </body>
 </html>
